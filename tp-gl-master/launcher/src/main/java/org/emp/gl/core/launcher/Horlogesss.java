@@ -1,16 +1,11 @@
 package org.emp.gl.core.launcher;
 
-import org.emp.gl.HorlogeGraphique;
 import org.emp.gl.clients.CompteARebour;
-import org.emp.gl.clients.Horloge ;
+import org.emp.gl.clients.Horloge;
 import org.emp.gl.time.service.impl.DummyTimeServiceImpl;
 import org.emp.gl.timer.service.TimerService;
 
-/**
- * Hello world!
- *
- */
-public class App {
+public class Horlogesss {
 
     public static void main(String[] args) {
 
@@ -19,9 +14,12 @@ public class App {
 
     private static void testDuTimeService() {
         TimerService timerService=new DummyTimeServiceImpl();
-        javax.swing.SwingUtilities.invokeLater(() -> {
-            new HorlogeGraphique(timerService);
-        });
+        Horloge horloge1 = new Horloge("hologe 1",timerService) ;
+        Horloge horloge2 = new Horloge("hologe 2",timerService) ;
+        Horloge horloge3 = new Horloge("hologe 3",timerService) ;
+        Horloge horloge4 = new Horloge("hologe 4",timerService) ;
+
+
     }
 
     public static void clearScreen() {
